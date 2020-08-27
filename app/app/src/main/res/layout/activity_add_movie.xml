@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMovieActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="영화 정보 추가 화면"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="제목 : "
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="제목을 입력하세요."
+            android:textSize="20sp"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/genre_layout"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="장르 : "
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/movie_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="장르를 입력하세요."
+            android:textSize="20sp"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/year_layout"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/genre_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="출시 : "
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/movie_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="출시 연도를 숫자로 입력하세요."
+            android:textSize="20sp"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/year_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="등록하기"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="돌아가기"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
