@@ -23,8 +23,7 @@ object MovieRetrofit {
 
     private val retrofit =
         Retrofit.Builder()
-            .baseUrl("http://de99354583f0.ngrok.io/")
-            //.baseUrl("http://127.0.0.1:8000/")
+            .baseUrl("서버주소")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(okHttpClientBuilder().build())
             .build()

@@ -8,3 +8,11 @@ data class Movie(
 ) {
 
 }
+
+data class MovieRequest(
+    val title: String,
+    val genre: String,
+    val year: Int
+) {
+
+}

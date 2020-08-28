@@ -10,6 +10,10 @@ class MovieViewModel(id: Int) : ViewModel() {
     var movieList: MutableLiveData<List<Movie>> = MutableLiveData()
     var movie: MutableLiveData<Movie> = MutableLiveData()
 
+    fun initMovieList() {
+        movieList.value = listOf()
+    }
+
     fun getMovieListRetrofit() {
         MovieRetrofitClient.getMovieList(movieList)
     }

@@ -1,6 +1,7 @@
 package com.dongldh.movietestapp.retrofit
 
 import com.dongldh.movietestapp.data.Movie
+import com.dongldh.movietestapp.data.MovieRequest
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -10,7 +11,7 @@ interface MovieRetrofitService {
 
     @POST("/movies/")
     fun addMovie(
-        @Body movie: Movie
+        @Body movie: MovieRequest
     ): Call<Movie>
 
     @GET("/movies/{id}/")
@@ -21,7 +22,7 @@ interface MovieRetrofitService {
     @PUT("/movies/{id}/")
     fun updateMovie(
         @Path("id") id: Int,
-        @Body movie: Movie
+        @Body movie: MovieRequest
     ): Call<Movie>
 
     @DELETE("/movies/{id}/")
