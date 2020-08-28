@@ -1,0 +1,7 @@
+.idea/
+movievenv/
+app/.idea/
+movie_api/settings.py
+movie_api/__pycache__/
+movies/__pycache__/
+
